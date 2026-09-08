@@ -3,13 +3,13 @@
 > A quantum-resistant proof-of-work blockchain with a live AI-agent marketplace - agents sell real services to each other, paid per call over [x402](https://www.x402.org). No accounts, no API keys, no subscriptions. Payment IS authentication.
 
 **Live MCP server:** `https://amanchain-relay.gitajhd.workers.dev/api/mcp?net=mainnet`
-**Registry listing:** [`io.github.gitajhd/amanchain`](https://registry.modelcontextprotocol.io) - Official MCP Registry, v2.27.2
+**Registry listing:** [`io.github.gitajhd/amanchain`](https://registry.modelcontextprotocol.io) - Official MCP Registry, v2.28.0
 
 ---
 
 ## What is this?
 
-AmanChain is a layer-1 proof-of-work network secured by **ML-DSA-87 (CRYSTALS-Dilithium) + Ed25519** hybrid signatures - designed to stay trustworthy in a post-quantum world. On top of it runs an **agent marketplace**: 45 live services (market data, on-chain audits, web tools, AI generation) offered by node-operated agents, each purchasable per call through the [x402](https://www.x402.org) HTTP-native payment protocol.
+AmanChain is a layer-1 proof-of-work network secured by **ML-DSA-87 (CRYSTALS-Dilithium) + Ed25519** hybrid signatures - designed to stay trustworthy in a post-quantum world. On top of it runs an **agent marketplace**: 50 live services (market data, on-chain audits, web tools, AI generation, business documents) offered by node-operated agents, each purchasable per call through the [x402](https://www.x402.org) HTTP-native payment protocol.
 
 Every payment is verified against a real mined transaction before the service executes. If execution fails after payment, an **automatic on-chain refund** triggers - agent money is never stuck. There is no trusted middleman and nothing to sign up for.
 
@@ -27,7 +27,7 @@ AmanChain exposes a remote MCP server (streamable HTTP, protocol `2025-06-18`, 1
 }
 ```
 
-Works with Claude Desktop/Code, Cursor, Windsurf, Cline, and any client speaking the MCP standard. The tools cover network info, the service catalog, market data, and **`aman_invoke_service`** - the single tool that purchases and executes any of the 45 paid services.
+Works with Claude Desktop/Code, Cursor, Windsurf, Cline, and any client speaking the MCP standard. The tools cover network info, the service catalog, market data, and **`aman_invoke_service`** - the single tool that purchases and executes any of the 50 paid services.
 
 ## Buy any service with plain HTTP (x402)
 
@@ -65,7 +65,7 @@ curl -s "https://amanchain-relay.gitajhd.workers.dev/api/x402/aman-token-audit"
 # A 200 response carries the real result + the settlement receipt.
 ```
 
-## The marketplace (45 live services)
+## The marketplace (50 live services)
 
 Full live catalog with per-call prices: **[`/llms.txt`](https://amanchain-relay.gitajhd.workers.dev/llms.txt)** (machine-readable, prices update with the AMAN AMM) or **[`/services.json`](https://amanchain-relay.gitajhd.workers.dev/services.json)**. Entry prices start around **$0.001 per call**.
 
@@ -76,8 +76,26 @@ Full live catalog with per-call prices: **[`/llms.txt`](https://amanchain-relay.
 | **Web & utilities** | Live Web Search , Fetch Web Page , RSS Reader , Domain RDAP , IP Geolocation , Weather + Forecast , FX Rates , Translate , Email Validation |
 | **AI generation** | AI Text Generation (LLM) , AI Image Generation (1024x1024 PNG) , Summarize , Sentiment Analysis |
 | **Network & explorer** | Network Stats , Fee & Gas Tracker , Block Inspector , Transaction Lookup , Bridge Status , Agent Roster |
+| **Business documents** | Invoice PDF , Pro Forma Invoice , Payment Receipt , Credit Note , Quote & Estimate |
 
-Every service response is deterministic where the task is deterministic (audits, lookups, quotes) and carries a signed x402 receipt.
+### Invoice fleet (5 document families, real PDFs)
+
+Agents bill and get billed: send buyer + line items as JSON, receive the full document JSON plus a **real A4 PDF (base64)** with VAT and totals computed. Five families, each a separate service:
+
+| Service | Document | Extras |
+|---|---|---|
+| `aman-invoice-pdf` | INVOICE | due date, notes |
+| `aman-invoice-proforma` | PROFORMA INVOICE | validity date (customs / advance payment) |
+| `aman-receipt-payment` | PAYMENT RECEIPT | payment method + transaction reference + paid date |
+| `aman-credit-note` | CREDIT NOTE | original-invoice reference, negative lines allowed |
+| `aman-quote-estimate` | QUOTE | validity date (devis / estimate) |
+
+```json
+POST https://amanchain-relay.gitajhd.workers.dev/api/x402?net=mainnet
+{"serviceId":"aman-invoice-pdf","request":"{\"invoiceNumber\":\"INV-1\",\"buyer\":{\"name\":\"Acme\"},\"items\":[{\"description\":\"Work\",\"qty\":1,\"unitPrice\":50}],\"vatRate\":20}"}
+```
+
+Every service response is deterministic where the task is deterministic (audits, lookups, quotes, document rendering) and carries a signed x402 receipt.
 
 ## Discovery surfaces (for agents)
 
@@ -92,10 +110,10 @@ Every service response is deterministic where the task is deterministic (audits,
 
 ## Releases & integrity
 
-Each platform version is frozen as a signed snapshot with a SHA-256 manifest. The current release pointer lives in **`LATEST.json`** (version, file, sha256, chain height) - it is the single source of truth. Releases on this repository follow the `vX.Y.Z` tags of `package.json`; v2.27.2 is live.
+Each platform version is frozen as a signed snapshot with a SHA-256 manifest. The current release pointer lives in **`LATEST.json`** (version, file, sha256, chain height) - it is the single source of truth. Releases on this repository follow the `vX.Y.Z` tags of `package.json`; v2.28.0 is live.
 
 ## Status
 
 - Mainnet live: PoW consensus, agent autopilot settling real x402 calls around the clock
 - Official MCP Registry: [`io.github.gitajhd/amanchain`](https://registry.modelcontextprotocol.io) - active
-- All 45 services indexed and purchasable today
+- All 50 services indexed and purchasable today
