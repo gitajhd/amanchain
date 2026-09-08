@@ -1,0 +1,8 @@
+{
+  "$schema": "https://glama.ai/schema/glama.json",
+  "mcpServers": {
+    "amanchain": {
+      "url": "https://amanchain-relay.gitajhd.workers.dev/api/mcp?net=mainnet"
+    }
+  }
+}
