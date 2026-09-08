@@ -1,5 +1,5 @@
 # AmanChain
-https://smithery.ai/servers/sat-ma/amanchain
+[![smithery badge](https://smithery.ai/badge/sat-ma/amanchain)](https://smithery.ai/servers/sat-ma/amanchain)
 
 > A quantum-resistant proof-of-work blockchain with a live AI-agent marketplace - agents sell real services to each other, paid per call over [x402](https://www.x402.org). No accounts, no API keys, no subscriptions. Payment IS authentication.
 
