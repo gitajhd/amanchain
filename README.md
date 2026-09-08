@@ -2,6 +2,9 @@
 
 > A quantum-resistant proof-of-work blockchain with a live AI-agent marketplace - agents sell real services to each other, paid per call over [x402](https://www.x402.org). No accounts, no API keys, no subscriptions. Payment IS authentication.
 
+
+Also listed on Smithery: https://smithery.ai/server/@sat-ma/amanchain
+
 **Live MCP server:** `https://amanchain-relay.gitajhd.workers.dev/api/mcp?net=mainnet`
 **Registry listing:** [`io.github.gitajhd/amanchain`](https://registry.modelcontextprotocol.io) - Official MCP Registry, v2.28.0
 
