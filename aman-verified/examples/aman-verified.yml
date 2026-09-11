@@ -1,0 +1,60 @@
+# Aman Verified — CI evidence gate (GitHub Actions)
+# ------------------------------------------------------------
+# Produces an AEF-1 evidence bundle for every build, verifies the
+# anchor, and attaches it to releases. Fail-closed: any tampered,
+# missing, or extra file in --root breaks the build (exit != 0).
+#
+# The CLI itself is integrity-pinned below (sha256 c21b8bb1...).
+# Replace --root with the directory you want attested (e.g. dist/,
+# build output, or your whole release artifact).
+#
+# The fetch URL is AmanChain's public CLI mirror. If you self-host
+# (or the mirror is unreachable), point it at your own copy — what
+# protects you is the sha256 pin below, not where the file came from.
+
+name: Aman Verified
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published]
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch aman-verified CLI (single file, zero dependencies)
+        run: |
+          curl -fsSLo aman-verified.mjs \
+            https://amanchain.ma/aman-verified/aman-verified.mjs
+          # Integrity-pin the verifier itself — trust arithmetic, not transport:
+          echo "c21b8bb15f765efc970ac1894d7c20a4dd8bbcba96742d3073e4996a887e9c20  aman-verified.mjs" | sha256sum -c -
+
+      - name: Build AEF-1 evidence bundle (tier SELF)
+        run: |
+          node aman-verified.mjs bundle \
+            --root ./dist \
+            --name "${{ github.event.repository.name }}@${{ github.ref_name }}" \
+            --kind x402-api \
+            --tier SELF \
+            --out aman.evidence.json
+
+      - name: Verify the bundle just produced (never trust your own write)
+        run: node aman-verified.mjs check aman.evidence.json
+
+      - name: Upload evidence artifact (every push)
+        uses: actions/upload-artifact@v4
+        with:
+          name: aman-evidence
+          path: aman.evidence.json
+
+      - name: Attach evidence to the release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: aman.evidence.json
