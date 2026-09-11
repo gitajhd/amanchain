@@ -1,0 +1,8 @@
+43bbc72d43f422d4305a745c4f9348628124bbfb5aabdc88df33c2c0de635536  ./README.md
+71d1daeb0aed836fe736ecdd9d80e7bc0a28bff7ed0cdc07f0314d1d2df81094  ./SPEC.md
+a9810d4168b807455deffa70ed8a8685c0aeceba62172eb6a7d5009fb518d27c  ./LICENSE
+c21b8bb15f765efc970ac1894d7c20a4dd8bbcba96742d3073e4996a887e9c20  ./bin/aman-verified.mjs
+486c1615b4d0745aa5910ff94a51112b93cd3b259437d47dadcd0c5e1c3416e7  ./evidence/tat-g2.aman.badge.json
+38f6aa28469febf1a034a5e17b05629e188e355328eb172d8a28db750e57d6c0  ./evidence/tat-g2.aman.badge.svg
+7a6e569ab34fa5f8a175185df565629c3b629fa70e1a066478602e076f36ca65  ./evidence/tat-g2.aman.evidence.json
+a410606d9e3f32b951da1df4a4ffe78aaa4212588a1e3154fd51522e2ba8e34a  ./examples/aman-verified.yml
