@@ -1,0 +1,253 @@
+{
+  "aman_evidence_version": "1.0",
+  "subject": {
+    "name": "TAT x402-token-risk-api G2 Independent Executor Package",
+    "kind": "x402-package"
+  },
+  "generated_at": "2026-09-10T15:10:22Z",
+  "tool": {
+    "name": "aman-verified",
+    "version": "0.1.0"
+  },
+  "scope": {
+    "file_count": 29,
+    "total_bytes": 337850,
+    "manifest": "SHA256SUMS.txt"
+  },
+  "files": [
+    {
+      "path": ".npmrc",
+      "size": 86,
+      "sha256": "ef4b317af6cecfa7ea8945c4f5a9a41e53049b0990b9c28b5085f2d30f5611a1"
+    },
+    {
+      "path": "CLIENT_MANIFEST.txt",
+      "size": 1919,
+      "sha256": "477932800e8138c0463a0f7f416a9100e1427e75cfb4317a3fc4381e480e253d"
+    },
+    {
+      "path": "DEPENDENCY_VERSIONS.txt",
+      "size": 1144,
+      "sha256": "68700f5518aceaafc7bfcc4f8e2289ffde28724b638c330599bf8772e464cb79"
+    },
+    {
+      "path": "PACKAGE_README.txt",
+      "size": 2026,
+      "sha256": "761a0a414b27cb2a1152acc24ae3fad85cb879c0c1b266abc1eb5b2cbb4f41c4"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "size": 2779,
+      "sha256": "333d3d77e2a03f9021235d27353a7553678803e9019e7de433622c84074a18de"
+    },
+    {
+      "path": "docs/G2_FIRST_PAID_CALL_EXECUTOR_INSTRUCTIONS.md",
+      "size": 15867,
+      "sha256": "eb96751657da7d14afa083c00f8b5224db8c860801af773cd08c9666c0dd62c0"
+    },
+    {
+      "path": "docs/G2_FIRST_PAID_CALL_OWNER_DECISION.md",
+      "size": 4647,
+      "sha256": "04d76f8da3681f8317b18468eb48d478d2c0ed19493daad4d9855ac32b0684c6"
+    },
+    {
+      "path": "docs/G2_FIRST_PAID_CALL_READINESS.md",
+      "size": 7851,
+      "sha256": "ec22e4a8c6bfd6a10b2c7e37434b663b38654593e4f349523fde6d34829cfde5"
+    },
+    {
+      "path": "docs/evidence/G2_FIRST_PAID_CALL_READINESS.json",
+      "size": 8786,
+      "sha256": "41d76756a2aba477bd221350fa2362cef8dd2e4d201ba282d736c899b7a065e4"
+    },
+    {
+      "path": "package.json",
+      "size": 8985,
+      "sha256": "4aba8d1a17b6813257c0207c76f4090427d5eef04b7286dad8fe504b058924ee"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "size": 89033,
+      "sha256": "d17b6856d0f8b7e246bdc15d64410cf6424d91b0900ebb0a51e8e1fed6d67cec"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "size": 262,
+      "sha256": "3c24a5000c3040e1dd428e182a62637678fbbc063d3ae1511d1a3a1c4996edcb"
+    },
+    {
+      "path": "scripts/external-independent-buyer-phase-a.ts",
+      "size": 5715,
+      "sha256": "2ad96b7ef007205e8835ed5ae8bba42f7aade88ec3185f7320619416355963b6"
+    },
+    {
+      "path": "scripts/external-independent-buyer-phase-b.ts",
+      "size": 7770,
+      "sha256": "0e6e6213cd78bfe06124371fd18cc7ed38ea4b1394bd81380720123581d0518c"
+    },
+    {
+      "path": "scripts/external-independent-buyer-recover.ts",
+      "size": 8292,
+      "sha256": "6160f17bf277332d405c57a5c0c476848e859f4fcac68fd37c3d945b4db64099"
+    },
+    {
+      "path": "scripts/external-independent-buyer.ts",
+      "size": 2683,
+      "sha256": "e6cb176a26fe75ccf7e4562fd7f07a6f13a50eb13268b4fcb8d66bcb2e0bdbd3"
+    },
+    {
+      "path": "scripts/g2-independent-executor-preflight.ts",
+      "size": 802,
+      "sha256": "df2d2be725f62b8ed90efce1b55e6105c6d90ce495b393af55633de03ef40fc1"
+    },
+    {
+      "path": "src/buyer/requirements.ts",
+      "size": 4855,
+      "sha256": "962afbf579d2147e1f1d391bc6b48607a681de47655ea982bbf8ca2326e297f1"
+    },
+    {
+      "path": "src/buyer/settlement-verifier.ts",
+      "size": 20865,
+      "sha256": "6f963f0f806284795368ad642b18df0265f5cc9186c03d831c5b055a05787a87"
+    },
+    {
+      "path": "src/buyer/types.ts",
+      "size": 4950,
+      "sha256": "a4816400b5ff06c50cb464ad979b38d93f509d90c1859726f61b487483af173e"
+    },
+    {
+      "path": "src/external-agent-contract.ts",
+      "size": 8587,
+      "sha256": "c8f5f5f7ed0d1a706535505967e76b8115bf559b7cf073775ddcace38dd111c6"
+    },
+    {
+      "path": "src/external-buyer/g2-executor-profile.ts",
+      "size": 13555,
+      "sha256": "4afd76b59baf440480282a077cac5a628591de90da4e1b0ab5d32184b234d249"
+    },
+    {
+      "path": "src/external-buyer/independent-buyer.ts",
+      "size": 9655,
+      "sha256": "7e92d6f62e5ae648ae42232bba9a0d20872dad241453bb49dcb3518766c46256"
+    },
+    {
+      "path": "src/external-buyer/paid-e2e.ts",
+      "size": 38705,
+      "sha256": "25f667cda6ffcfd2d161852c7a0d32a496c1acd6dfffb49ae1399b7efbfc613a"
+    },
+    {
+      "path": "src/external-buyer/payment-submission-observability.ts",
+      "size": 3160,
+      "sha256": "2f570fa9fea1bec5a158e7ae4a580684af66e5cf200ea69f9a1d233b4c6472f1"
+    },
+    {
+      "path": "src/external-buyer/persistent-handoff.ts",
+      "size": 33456,
+      "sha256": "a1872d0eb2bc8a31aeb7541caf59e2d63ec2d88462303571f2fc82c3d5fcfb44"
+    },
+    {
+      "path": "src/external-buyer/phase-b-runtime.ts",
+      "size": 3844,
+      "sha256": "20227cf47d8b775bbb55992bd86ddfa4e2694e38f86bdb0a41ea338cb63958e8"
+    },
+    {
+      "path": "src/external-buyer/policy.ts",
+      "size": 1217,
+      "sha256": "d3438afafed00ae2a12b40aa34f8968f30eece869539215e77c4f1032e97b701"
+    },
+    {
+      "path": "src/external-buyer/recovery.ts",
+      "size": 26354,
+      "sha256": "c425808382559790a41770ef5e8a87f61f4ac1552e027009f7a26c4c884e4f9a"
+    }
+  ],
+  "checks": [
+    {
+      "id": "sums-manifest-28/28",
+      "status": "PASS",
+      "expected": "28/28 OK",
+      "actual": "28/28 OK",
+      "detail": "external manifest matches re-hashed tree byte-for-byte (manifest self-excluded)"
+    },
+    {
+      "id": "scope-limit-base-sepolia-only",
+      "status": "PASS",
+      "expected": "84532",
+      "actual": "84532",
+      "detail": "client pinned to Base Sepolia chainId, mainnet disallowed"
+    },
+    {
+      "id": "token-pinned-usdc-circle",
+      "status": "PASS",
+      "expected": "0x036cbd53842c5426634e7929541ec2318f3dcf7e",
+      "actual": "0x036cbd53842c5426634e7929541ec2318f3dcf7e",
+      "detail": "official Circle test USDC on Base Sepolia"
+    },
+    {
+      "id": "payto-pinned",
+      "status": "PASS",
+      "expected": "0x9fa1228cddb92c766540fb6a7d0461f9abe7836f",
+      "actual": "0x9fa1228cddb92c766540fb6a7d0461f9abe7836f",
+      "detail": "recipient fixed in handoff validation"
+    },
+    {
+      "id": "amount-pinned-50000-atomic",
+      "status": "PASS",
+      "expected": "50000",
+      "actual": "50000",
+      "detail": "payment cap pinned across all layers"
+    },
+    {
+      "id": "payment-attempts",
+      "status": "PASS",
+      "expected": "1",
+      "actual": "1",
+      "detail": "single attempt enforced"
+    },
+    {
+      "id": "additional-buyer-usdc",
+      "status": "PASS",
+      "expected": "0",
+      "actual": "0",
+      "detail": "no USDC beyond the capped attempt"
+    },
+    {
+      "id": "buyer-native-gas",
+      "status": "PASS",
+      "expected": "0",
+      "actual": "0",
+      "detail": "EIP-3009 relayed, zero wei from buyer"
+    },
+    {
+      "id": "network-origins",
+      "status": "PASS",
+      "expected": "1",
+      "actual": "1",
+      "detail": "only pinned https://x402-token-risk-api-6cj2.onrender.com"
+    }
+  ],
+  "negative_tests": [
+    {
+      "id": "missing-required-field",
+      "expected_result": "BLOCKED",
+      "result": "BLOCKED",
+      "code": "G2_EXECUTOR_PROFILE_INCOMPLETE"
+    },
+    {
+      "id": "origin-substitution",
+      "expected_result": "BLOCKED",
+      "result": "BLOCKED",
+      "code": "INVALID"
+    }
+  ],
+  "attestation": {
+    "verifier": "AmanChain",
+    "verifier_id": "amanchain-verify-01",
+    "tier": "AMAN-1",
+    "method": "independent-offline",
+    "signed_by": "gitajhd",
+    "attested_at": "2026-09-10T15:10:22Z",
+    "statement": "All digests and checks independently re-derived offline by the verifier; fail-closed negative tests confirmed."
+  },
+  "bundle_sha256": "64fe9f2abd0e7afcb841cce0531449f0c31feb932810c79ef17bdaf69180894f"
+}

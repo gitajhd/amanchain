@@ -1,1 +1,13 @@
-{"data":"file:\/\/\/storage\/emulated\/0\/Android\/data\/org.qpython.qpy\/files\/cache\/tat-g2.aman.badge.json","type":"application\/json","extras":{"t":1789086034790,"isFileManager":true},"categories":null,"action":"android.intent.action.VIEW","packagename":"org.qpython.qpy","classname":"org.qpython.qpy.texteditor.EditorActivity","flags":50331649} # ExtraTypes={t=java.lang.Long, isFileManager=java.lang.Boolean}
+{
+  "badge": "aman-verified",
+  "aef_version": "1.0",
+  "subject": "TAT x402-token-risk-api G2 Independent Executor Package",
+  "kind": "x402-package",
+  "tier": "AMAN-1",
+  "clean": true,
+  "bundle_sha256_truncated": "64fe9f2abd0e",
+  "bundle_sha256": "64fe9f2abd0e7afcb841cce0531449f0c31feb932810c79ef17bdaf69180894f",
+  "verified_by": "AmanChain",
+  "verified_at": "2026-09-10T15:10:22Z",
+  "verify": "https://amanchain.ma/aman-verified/bundle/64fe9f2abd0e"
+}
